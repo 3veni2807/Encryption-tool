@@ -46,4 +46,3 @@ function encryptMessage(message, shift) {
       output.textContent = 'Please enter a message.';
     }
   });
-  

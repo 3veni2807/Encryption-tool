@@ -16,16 +16,17 @@ body {
     border-radius: 12px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
     text-align: center;
-    width: 100%; /* Adjust to make it responsive */
+    width: 100%; /* Responsive */
     max-width: 720px; /* Set a max width */
-    height: auto; /* Adjust height */
-    overflow: hidden; /* Hide any content that overflows */
+    height: auto;
+    overflow: hidden; /* Hide overflow */
+    box-sizing: border-box; /* Include padding and border in width */
 }
 
 h1 {
     color: #333;
     font-size: 2rem;
-    margin-bottom: 40px; /* Added more space below the heading */
+    margin-bottom: 40px;
 }
 
 label {
@@ -34,9 +35,8 @@ label {
     margin: 16px 0 8px;
 }
 
-/* Add specific margin for the second label */
 label:nth-of-type(2) {
-    margin-top: 24px; /* Adjust this value as needed */
+    margin-top: 24px;
 }
 
 input {
@@ -46,6 +46,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1.1rem;
+    box-sizing: border-box;
 }
 
 .buttons {
@@ -70,16 +71,19 @@ button:hover {
 #result {
     margin-top: 32px;
     color: #333;
-    overflow: auto; /* Allows scrolling if content is too large */
-    word-wrap: break-word; /* Breaks long words */
+    word-wrap: break-word; /* Wraps long words */
+    overflow-wrap: break-word; /* Alternative for word wrapping */
+    max-width: 100%; /* Ensure it doesn't exceed container's width */
 }
 
 #output {
     font-weight: bold;
     font-size: 1.3rem;
+    word-wrap: break-word; /* Wraps long words */
+    overflow-wrap: break-word; /* Alternative for word wrapping */
+    max-width: 100%; /* Ensure it doesn't exceed container's width */
 }
 
-/* Add media query for smaller screens */
 @media (max-width: 768px) {
     .container {
         padding: 16px;
@@ -88,22 +92,22 @@ button:hover {
     }
 
     h1 {
-        font-size: 1.5rem; /* Adjust heading size */
+        font-size: 1.5rem;
     }
 
     label {
-        font-size: 1.2rem; /* Adjust label size */
+        font-size: 1.2rem;
     }
 
     input {
-        font-size: 1rem; /* Adjust input font size */
+        font-size: 1rem;
     }
 
     button {
-        font-size: 1rem; /* Adjust button font size */
+        font-size: 1rem;
     }
 
     #output {
-        font-size: 1.1rem; /* Adjust output font size */
+        font-size: 1.1rem;
     }
 }
