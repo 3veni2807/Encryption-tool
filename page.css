@@ -7,6 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    box-sizing: border-box;
 }
 
 .container {
@@ -15,8 +16,10 @@ body {
     border-radius: 12px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
     text-align: center;
-    width: 720px;
-    height: 560px;
+    width: 100%; /* Adjust to make it responsive */
+    max-width: 720px; /* Set a max width */
+    height: auto; /* Adjust height */
+    overflow: hidden; /* Hide any content that overflows */
 }
 
 h1 {
@@ -67,9 +70,40 @@ button:hover {
 #result {
     margin-top: 32px;
     color: #333;
+    overflow: auto; /* Allows scrolling if content is too large */
+    word-wrap: break-word; /* Breaks long words */
 }
 
 #output {
     font-weight: bold;
     font-size: 1.3rem;
+}
+
+/* Add media query for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    label {
+        font-size: 1.2rem; /* Adjust label size */
+    }
+
+    input {
+        font-size: 1rem; /* Adjust input font size */
+    }
+
+    button {
+        font-size: 1rem; /* Adjust button font size */
+    }
+
+    #output {
+        font-size: 1.1rem; /* Adjust output font size */
+    }
 }
