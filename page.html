@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encryption and Decryption Tool</title>
+  <link rel="stylesheet" href="page.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Data Encryption and Decryption Tool</h1>
+    <label for="message">Enter Your Message:</label>
+    <input type="text" id="message" placeholder="Type your message here" />
+    
+    <label for="shift">Select Shift Value:</label>
+    <input type="number" id="shift" min="1" max="25" value="3" />
+    
+    <div class="buttons">
+      <button id="encrypt">Encrypt</button>
+      <button id="decrypt">Decrypt</button>
+    </div>
+    
+    <div id="result">
+      <h2>Result:</h2>
+      <p id="output"></p>
+    </div>
+  </div>
+  <script src="page.js"></script>
+</body>
+</html>
